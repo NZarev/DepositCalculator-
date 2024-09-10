@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class DepositCalculator {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        double depositedAmount = scanner.nextDouble();
+        int depositPeriodMonths = scanner.nextInt();
+        double annualInterestRate = scanner.nextDouble();
+
+        double interest = (depositedAmount * annualInterestRate / 100) / 12;
+        double totalAmount = depositedAmount + depositPeriodMonths * interest;
+
+        System.out.printf("%.2f%n", totalAmount);
+
+        scanner.close();
+    }
+}
